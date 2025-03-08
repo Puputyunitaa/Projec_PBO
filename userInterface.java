@@ -43,8 +43,7 @@ public class userInterface {
                  int sks = input.nextInt();
                  input.nextLine();
                  System.out.print("IPK             : ");
-                 String ipkString = input.nextLine().replace(',', '.');
-                 double ipk = Double.parseDouble(ipkString);
+                 double ipk = input.nextDouble();
                  input.nextLine();
                  System.out.println("------------------------------------------------");
                  boolean status = db.insert(nim,nama,alamat,semester,sks,ipk);
@@ -83,8 +82,7 @@ public class userInterface {
                      sks = input.nextInt();
                      input.nextLine();
                      System.out.print("IPK            : ");
-                     ipkString = input.nextLine().replace(',', '.');
-                     ipk = Double.parseDouble(ipkString);
+                     ipk = input.nextDouble();
                      input.nextLine();
                      System.out.println("------------------------------------------------");
                      status = db.update(index, nim,nama,alamat,semester,sks,ipk);
